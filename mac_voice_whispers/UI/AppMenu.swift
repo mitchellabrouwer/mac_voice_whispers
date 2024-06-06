@@ -2,11 +2,13 @@ import AVFoundation
 import SwiftUI
 
 struct AppMenu: View {
-  @ObservedObject var appState: AppState
-  
+  @EnvironmentObject var appState: WhisperState
+
   func toggleRecording() {
     Task {
-      await appState.whisperState.toggleRecord()
+      print("Before toggling, isRecording:", appState.isRecording)
+      await appState.toggleRecord()
+      print("After toggling, isRecording:", appState.isRecording)
     }
   }
 
@@ -18,17 +20,25 @@ struct AppMenu: View {
     VStack(alignment: .leading) {
       Button(
         action: toggleRecording,
-        label: { Text(appState.whisperState.isRecording ? "Stop recording" : "Start recording") }
+        label: { Text(appState.isRecording ? "Stop recording" : "Start recording") }
       ).padding(10).keyboardShortcut("i", modifiers: [.control, .command, .option])
 
       Divider()
-      
+
+      VStack {
+        Text("Recording Status:")
+        Text(appState.isRecording ? "Recording" : "Not Recording")
+          .foregroundColor(appState.isRecording ? .red : .green)
+      }
+      .padding()
+
       Button(action: quit, label: { Text("Quit") }).padding(10)
 
       ScrollView {
-        Text(verbatim: appState.whisperState.messageLog)
+        Text(verbatim: appState.logger)
           .frame(maxWidth: .infinity, alignment: .leading)
       }
     }
   }
 }
+

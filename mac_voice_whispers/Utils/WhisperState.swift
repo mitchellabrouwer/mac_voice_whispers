@@ -10,14 +10,14 @@ import SwiftUI
 @MainActor
 class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
   @Published var isModelLoaded = false
-  @Published var messageLog = ""
+  @Published var logger = ""
+  @Published var transcribedMessage = ""
   @Published var canTranscribe = false
   @Published var isRecording = false
 
   private var whisperContext: WhisperContext?
   private let recorder = Recorder()
   private var recordedFile: URL? = nil
-  private var audioPlayer: AVAudioPlayer?
 
   private var modelUrl: URL? {
     Bundle.main.url(forResource: "ggml-tiny.en", withExtension: "bin")
@@ -38,17 +38,17 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
       canTranscribe = true
     } catch {
       print(error.localizedDescription)
-      messageLog += "\(error.localizedDescription)\n"
+      logger += "\(error.localizedDescription)\n"
     }
   }
 
   private func loadModel() throws {
-    messageLog += "Loading model...\n"
+    logger += "Loading model...\n"
     if let modelUrl {
       whisperContext = try WhisperContext.createContext(path: modelUrl.path())
-      messageLog += "Loaded model \(modelUrl.lastPathComponent)\n"
+      logger += "Loaded model \(modelUrl.lastPathComponent)\n"
     } else {
-      messageLog += "Could not locate model\n"
+      logger += "Could not locate model\n"
     }
   }
 
@@ -56,7 +56,7 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
     if let sampleUrl {
       await transcribeAudio(sampleUrl)
     } else {
-      messageLog += "Could not locate sample\n"
+      logger += "Could not locate sample\n"
     }
   }
 
@@ -70,40 +70,41 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
 
     do {
       canTranscribe = false
-      messageLog += "Reading wave samples...\n"
+      logger += "Reading wave samples...\n"
       let data = try readAudioSamples(url)
-      messageLog += "Transcribing data...\n"
+      logger += "Transcribing data...\n"
       await whisperContext.fullTranscribe(samples: data)
       let text = await whisperContext.getTranscription()
-      messageLog += "Done: \(text)\n"
+      transcribedMessage = text
     } catch {
       print(error.localizedDescription)
-      messageLog += "\(error.localizedDescription)\n"
+      logger += "\(error.localizedDescription)\n"
     }
 
     canTranscribe = true
   }
 
   private func readAudioSamples(_ url: URL) throws -> [Float] {
-    stopPlayback()
-    try startPlayback(url)
     return try decodeWaveFile(url)
   }
 
   func toggleRecord() async {
     if isRecording {
+      print("Stopping recording...")
       await recorder.stopRecording()
       isRecording = false
+      print("Recording stopped. isRecording: \(isRecording)")
       if let recordedFile {
         await transcribeAudio(recordedFile)
-        insertText(text: messageLog)
+        insertText(text: transcribedMessage)
       }
     } else {
       requestRecordPermission { granted in
         if granted {
           Task {
             do {
-              self.stopPlayback()
+              print("Starting recording...")
+
               let file = try FileManager.default.url(
                 for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true
               )
@@ -111,9 +112,11 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
               try await self.recorder.startRecording(toOutputFile: file, delegate: self)
               self.isRecording = true
               self.recordedFile = file
+                print("Recording started. isRecording \(self.isRecording)")
+
             } catch {
               print(error.localizedDescription)
-              self.messageLog += "\(error.localizedDescription)\n"
+              self.logger += "\(error.localizedDescription)\n"
               self.isRecording = false
             }
           }
@@ -132,16 +135,6 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
     #endif
   }
 
-  private func startPlayback(_ url: URL) throws {
-    audioPlayer = try AVAudioPlayer(contentsOf: url)
-    audioPlayer?.play()
-  }
-
-  private func stopPlayback() {
-    audioPlayer?.stop()
-    audioPlayer = nil
-  }
-
   nonisolated func audioRecorderEncodeErrorDidOccur(_ recorder: AVAudioRecorder, error: Error?) {
     if let error {
       Task {
@@ -152,19 +145,7 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
 
   private func handleRecError(_ error: Error) {
     print(error.localizedDescription)
-    messageLog += "\(error.localizedDescription)\n"
-    isRecording = false
-  }
-
-  nonisolated func audioRecorderDidFinishRecording(
-    _ recorder: AVAudioRecorder, successfully flag: Bool
-  ) {
-    Task {
-      await onDidFinishRecording()
-    }
-  }
-
-  private func onDidFinishRecording() {
+    logger += "\(error.localizedDescription)\n"
     isRecording = false
   }
 
@@ -195,4 +176,19 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
     vKeyUp?.post(tap: .cghidEventTap)
     commandKeyUp?.post(tap: .cghidEventTap)
   }
+
+  nonisolated func audioRecorderDidFinishRecording(
+    _ recorder: AVAudioRecorder, successfully flag: Bool
+  ) {
+    Task {
+      await onDidFinishRecording()
+    }
+  }
+
+  private func onDidFinishRecording() {
+    isRecording = false
+    print("Recording finished. isRecording: \(isRecording)")
+
+  }
+
 }

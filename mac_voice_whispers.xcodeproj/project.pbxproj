@@ -18,7 +18,7 @@
 		3099D88A2C114953009C3574 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8832C114953009C3574 /* Recorder.swift */; };
 		3099D88B2C114953009C3574 /* RiffWaveUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8842C114953009C3574 /* RiffWaveUtils.swift */; };
 		3099D88C2C114953009C3574 /* WhisperState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8852C114953009C3574 /* WhisperState.swift */; };
-		3099D88E2C114962009C3574 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D88D2C114962009C3574 /* AppState.swift */; };
+		3099D88E2C114962009C3574 /* KeyboardShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D88D2C114962009C3574 /* KeyboardShortcutManager.swift */; };
 		3099D8912C11499F009C3574 /* LibWhisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D88F2C11499F009C3574 /* LibWhisper.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +34,7 @@
 		3099D8832C114953009C3574 /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		3099D8842C114953009C3574 /* RiffWaveUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiffWaveUtils.swift; sourceTree = "<group>"; };
 		3099D8852C114953009C3574 /* WhisperState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperState.swift; sourceTree = "<group>"; };
-		3099D88D2C114962009C3574 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		3099D88D2C114962009C3574 /* KeyboardShortcutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardShortcutManager.swift; sourceTree = "<group>"; };
 		3099D88F2C11499F009C3574 /* LibWhisper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibWhisper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +77,6 @@
 				3099D8812C114953009C3574 /* Resources */,
 				3099D8862C114953009C3574 /* Utils */,
 				3099D8642C1140E1009C3574 /* mac_voice_whispersApp.swift */,
-				3099D88D2C114962009C3574 /* AppState.swift */,
 				3099D8682C1140E3009C3574 /* Assets.xcassets */,
 				3099D86D2C1140E3009C3574 /* mac_voice_whispers.entitlements */,
 				3099D86A2C1140E3009C3574 /* Preview Content */,
@@ -135,6 +134,7 @@
 		3099D8862C114953009C3574 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3099D88D2C114962009C3574 /* KeyboardShortcutManager.swift */,
 				3099D8832C114953009C3574 /* Recorder.swift */,
 				3099D8842C114953009C3574 /* RiffWaveUtils.swift */,
 				3099D8852C114953009C3574 /* WhisperState.swift */,
@@ -232,7 +232,7 @@
 			files = (
 				3099D88A2C114953009C3574 /* Recorder.swift in Sources */,
 				3099D8872C114953009C3574 /* AppMenu.swift in Sources */,
-				3099D88E2C114962009C3574 /* AppState.swift in Sources */,
+				3099D88E2C114962009C3574 /* KeyboardShortcutManager.swift in Sources */,
 				3099D88C2C114953009C3574 /* WhisperState.swift in Sources */,
 				3099D8652C1140E1009C3574 /* mac_voice_whispersApp.swift in Sources */,
 				3099D8912C11499F009C3574 /* LibWhisper.swift in Sources */,
