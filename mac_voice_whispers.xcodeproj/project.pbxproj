@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3099D8652C1140E1009C3574 /* mac_voice_whispersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8642C1140E1009C3574 /* mac_voice_whispersApp.swift */; };
-		3099D8672C1140E1009C3574 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8662C1140E1009C3574 /* ContentView.swift */; };
 		3099D8692C1140E3009C3574 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3099D8682C1140E3009C3574 /* Assets.xcassets */; };
 		3099D86C2C1140E3009C3574 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3099D86B2C1140E3009C3574 /* Preview Assets.xcassets */; };
 		3099D8742C1147F8009C3574 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3099D8732C1147F8009C3574 /* .gitignore */; };
@@ -16,7 +15,6 @@
 		3099D87A2C11490D009C3574 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 3099D8792C11490D009C3574 /* HotKey */; };
 		3099D8872C114953009C3574 /* AppMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D87B2C114953009C3574 /* AppMenu.swift */; };
 		3099D8882C114953009C3574 /* ggml-tiny.en.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3099D87E2C114953009C3574 /* ggml-tiny.en.bin */; };
-		3099D8892C114953009C3574 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8822C114953009C3574 /* Keyboard.swift */; };
 		3099D88A2C114953009C3574 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8832C114953009C3574 /* Recorder.swift */; };
 		3099D88B2C114953009C3574 /* RiffWaveUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8842C114953009C3574 /* RiffWaveUtils.swift */; };
 		3099D88C2C114953009C3574 /* WhisperState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8852C114953009C3574 /* WhisperState.swift */; };
@@ -27,14 +25,12 @@
 /* Begin PBXFileReference section */
 		3099D8612C1140E1009C3574 /* mac_voice_whispers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mac_voice_whispers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3099D8642C1140E1009C3574 /* mac_voice_whispersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mac_voice_whispersApp.swift; sourceTree = "<group>"; };
-		3099D8662C1140E1009C3574 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3099D8682C1140E3009C3574 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3099D86B2C1140E3009C3574 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3099D86D2C1140E3009C3574 /* mac_voice_whispers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mac_voice_whispers.entitlements; sourceTree = "<group>"; };
 		3099D8732C1147F8009C3574 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		3099D87B2C114953009C3574 /* AppMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMenu.swift; sourceTree = "<group>"; };
 		3099D87E2C114953009C3574 /* ggml-tiny.en.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ggml-tiny.en.bin"; sourceTree = "<group>"; };
-		3099D8822C114953009C3574 /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		3099D8832C114953009C3574 /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		3099D8842C114953009C3574 /* RiffWaveUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiffWaveUtils.swift; sourceTree = "<group>"; };
 		3099D8852C114953009C3574 /* WhisperState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperState.swift; sourceTree = "<group>"; };
@@ -82,7 +78,6 @@
 				3099D8862C114953009C3574 /* Utils */,
 				3099D8642C1140E1009C3574 /* mac_voice_whispersApp.swift */,
 				3099D88D2C114962009C3574 /* AppState.swift */,
-				3099D8662C1140E1009C3574 /* ContentView.swift */,
 				3099D8682C1140E3009C3574 /* Assets.xcassets */,
 				3099D86D2C1140E3009C3574 /* mac_voice_whispers.entitlements */,
 				3099D86A2C1140E3009C3574 /* Preview Content */,
@@ -140,7 +135,6 @@
 		3099D8862C114953009C3574 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3099D8822C114953009C3574 /* Keyboard.swift */,
 				3099D8832C114953009C3574 /* Recorder.swift */,
 				3099D8842C114953009C3574 /* RiffWaveUtils.swift */,
 				3099D8852C114953009C3574 /* WhisperState.swift */,
@@ -238,9 +232,7 @@
 			files = (
 				3099D88A2C114953009C3574 /* Recorder.swift in Sources */,
 				3099D8872C114953009C3574 /* AppMenu.swift in Sources */,
-				3099D8672C1140E1009C3574 /* ContentView.swift in Sources */,
 				3099D88E2C114962009C3574 /* AppState.swift in Sources */,
-				3099D8892C114953009C3574 /* Keyboard.swift in Sources */,
 				3099D88C2C114953009C3574 /* WhisperState.swift in Sources */,
 				3099D8652C1140E1009C3574 /* mac_voice_whispersApp.swift in Sources */,
 				3099D8912C11499F009C3574 /* LibWhisper.swift in Sources */,
