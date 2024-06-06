@@ -1,17 +1,18 @@
-//
-//  mac_voice_whispersApp.swift
-//  mac_voice_whispers
-//
-//  Created by Mitch Brouwer on 6/6/2024.
-//
-
+import HotKey
 import SwiftUI
 
 @main
-struct mac_voice_whispersApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+struct WhisperCppApp: App {
+  @StateObject private var appState = AppState.shared
+
+  var body: some Scene {
+
+    MenuBarExtra("UtilityApp", systemImage: "mic") {
+      AppMenu(appState: appState)
+    }.menuBarExtraStyle(.window)
+
+    WindowGroup {}
+
+  }
+
 }
