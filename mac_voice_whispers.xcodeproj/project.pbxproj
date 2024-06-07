@@ -20,6 +20,7 @@
 		3099D88C2C114953009C3574 /* WhisperState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8852C114953009C3574 /* WhisperState.swift */; };
 		3099D88E2C114962009C3574 /* KeyboardShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D88D2C114962009C3574 /* KeyboardShortcutManager.swift */; };
 		3099D8912C11499F009C3574 /* LibWhisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D88F2C11499F009C3574 /* LibWhisper.swift */; };
+		3099D8932C128697009C3574 /* KeyStringToModifierFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8922C128697009C3574 /* KeyStringToModifierFlag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3099D8852C114953009C3574 /* WhisperState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperState.swift; sourceTree = "<group>"; };
 		3099D88D2C114962009C3574 /* KeyboardShortcutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardShortcutManager.swift; sourceTree = "<group>"; };
 		3099D88F2C11499F009C3574 /* LibWhisper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibWhisper.swift; sourceTree = "<group>"; };
+		3099D8922C128697009C3574 /* KeyStringToModifierFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStringToModifierFlag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				3099D8832C114953009C3574 /* Recorder.swift */,
 				3099D8842C114953009C3574 /* RiffWaveUtils.swift */,
 				3099D8852C114953009C3574 /* WhisperState.swift */,
+				3099D8922C128697009C3574 /* KeyStringToModifierFlag.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3099D8932C128697009C3574 /* KeyStringToModifierFlag.swift in Sources */,
 				3099D88A2C114953009C3574 /* Recorder.swift in Sources */,
 				3099D8872C114953009C3574 /* AppMenu.swift in Sources */,
 				3099D88E2C114962009C3574 /* KeyboardShortcutManager.swift in Sources */,
