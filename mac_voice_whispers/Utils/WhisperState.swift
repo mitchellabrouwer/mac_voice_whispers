@@ -14,6 +14,7 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
   @Published var transcribedMessage = ""
   @Published var canTranscribe = false
   @Published var isRecording = false
+  @Published var isLoading = false
 
   private var whisperContext: WhisperContext?
   private let recorder = Recorder()
@@ -95,8 +96,10 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
       isRecording = false
       print("Recording stopped. isRecording: \(isRecording)")
       if let recordedFile {
+        isLoading = true
         await transcribeAudio(recordedFile)
         insertText(text: transcribedMessage)
+        isLoading = false
       }
     } else {
       requestRecordPermission { granted in
@@ -112,7 +115,7 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
               try await self.recorder.startRecording(toOutputFile: file, delegate: self)
               self.isRecording = true
               self.recordedFile = file
-                print("Recording started. isRecording \(self.isRecording)")
+              print("Recording started. isRecording \(self.isRecording)")
 
             } catch {
               print(error.localizedDescription)
