@@ -22,7 +22,7 @@
 		3099D8912C11499F009C3574 /* LibWhisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D88F2C11499F009C3574 /* LibWhisper.swift */; };
 		3099D8932C128697009C3574 /* KeyStringToModifierFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8922C128697009C3574 /* KeyStringToModifierFlag.swift */; };
 		3099D8952C12BD98009C3574 /* RecordingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8942C12BD98009C3574 /* RecordingIndicator.swift */; };
-		3099D8972C12BE1D009C3574 /* RecordingIndicatorWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8962C12BE1D009C3574 /* RecordingIndicatorWindowController.swift */; };
+		30E9CF7D2C1BC6CA00A3BE31 /* RecordingIndicatorWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9CF7C2C1BC6CA00A3BE31 /* RecordingIndicatorWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		3099D88F2C11499F009C3574 /* LibWhisper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibWhisper.swift; sourceTree = "<group>"; };
 		3099D8922C128697009C3574 /* KeyStringToModifierFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStringToModifierFlag.swift; sourceTree = "<group>"; };
 		3099D8942C12BD98009C3574 /* RecordingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingIndicator.swift; sourceTree = "<group>"; };
-		3099D8962C12BE1D009C3574 /* RecordingIndicatorWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingIndicatorWindowController.swift; sourceTree = "<group>"; };
+		30E9CF7C2C1BC6CA00A3BE31 /* RecordingIndicatorWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingIndicatorWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +146,7 @@
 				3099D8842C114953009C3574 /* RiffWaveUtils.swift */,
 				3099D8852C114953009C3574 /* WhisperState.swift */,
 				3099D8922C128697009C3574 /* KeyStringToModifierFlag.swift */,
-				3099D8962C12BE1D009C3574 /* RecordingIndicatorWindowController.swift */,
+				30E9CF7C2C1BC6CA00A3BE31 /* RecordingIndicatorWindowController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -240,9 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3099D8932C128697009C3574 /* KeyStringToModifierFlag.swift in Sources */,
+				30E9CF7D2C1BC6CA00A3BE31 /* RecordingIndicatorWindowController.swift in Sources */,
 				3099D88A2C114953009C3574 /* Recorder.swift in Sources */,
 				3099D8872C114953009C3574 /* AppMenu.swift in Sources */,
-				3099D8972C12BE1D009C3574 /* RecordingIndicatorWindowController.swift in Sources */,
 				3099D88E2C114962009C3574 /* KeyboardShortcutManager.swift in Sources */,
 				3099D88C2C114953009C3574 /* WhisperState.swift in Sources */,
 				3099D8652C1140E1009C3574 /* mac_voice_whispersApp.swift in Sources */,
