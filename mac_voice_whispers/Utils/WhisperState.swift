@@ -28,7 +28,7 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
     case couldNotLocateModel
   }
 
-  override init() {
+  init(isLoaded: Bool) {
     super.init()
     do {
       try loadModel()
