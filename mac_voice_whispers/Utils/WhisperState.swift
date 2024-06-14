@@ -24,10 +24,6 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
     Bundle.main.url(forResource: "ggml-tiny.en", withExtension: "bin")
   }
 
-  private var sampleUrl: URL? {
-    Bundle.main.url(forResource: "jfk", withExtension: "wav", subdirectory: "samples")
-  }
-
   private enum LoadError: Error {
     case couldNotLocateModel
   }
@@ -53,19 +49,18 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
     }
   }
 
-  func transcribeSample() async {
-    if let sampleUrl {
-      await transcribeAudio(sampleUrl)
-    } else {
-      logger += "Could not locate sample\n"
-    }
+  func transcribeSample(sampleUrl: URL) async {
+    await transcribeAudio(sampleUrl)
   }
 
-  private func transcribeAudio(_ url: URL) async {
+  internal func transcribeAudio(_ url: URL) async {
     if !canTranscribe {
+      logger += "Cannot transcribe...\n"
       return
     }
+
     guard let whisperContext else {
+      logger += "Whisper context is nil...\n"
       return
     }
 
@@ -73,8 +68,11 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
       canTranscribe = false
       logger += "Reading wave samples...\n"
       let data = try readAudioSamples(url)
+      logger += "Read \(data.count) samples.\n"
+
       logger += "Transcribing data...\n"
       await whisperContext.fullTranscribe(samples: data)
+
       let text = await whisperContext.getTranscription()
       transcribedMessage = text
     } catch {
@@ -113,9 +111,11 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
               )
               .appending(path: "output.wav")
               try await self.recorder.startRecording(toOutputFile: file, delegate: self)
-              self.isRecording = true
-              self.recordedFile = file
-              print("Recording started. isRecording \(self.isRecording)")
+              DispatchQueue.main.async {
+                self.isRecording = true
+                self.recordedFile = file
+                print("Recording started. isRecording \(self.isRecording)")
+              }
 
             } catch {
               print(error.localizedDescription)

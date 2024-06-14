@@ -8,8 +8,9 @@ struct RecordingIndicator: View {
       Circle()
         .fill(isLoading ? Color.yellow : Color.red)
         .frame(width: 30, height: 30)
-        ProgressView()
-          .progressViewStyle(CircularProgressViewStyle())
+        .accessibilityIdentifier(isLoading ? "yellowProgressLoader" : "redProgressLoader")
+      ProgressView()
+        .progressViewStyle(CircularProgressViewStyle())
     }
   }
 }

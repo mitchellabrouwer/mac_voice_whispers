@@ -23,7 +23,28 @@
 		3099D8932C128697009C3574 /* KeyStringToModifierFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8922C128697009C3574 /* KeyStringToModifierFlag.swift */; };
 		3099D8952C12BD98009C3574 /* RecordingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8942C12BD98009C3574 /* RecordingIndicator.swift */; };
 		30E9CF7D2C1BC6CA00A3BE31 /* RecordingIndicatorWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9CF7C2C1BC6CA00A3BE31 /* RecordingIndicatorWindowController.swift */; };
+		30E9CF852C1BC7A100A3BE31 /* mac_voice_whispersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9CF842C1BC7A100A3BE31 /* mac_voice_whispersTests.swift */; };
+		30E9CF922C1BC7E200A3BE31 /* mac_voice_whispersTestsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9CF912C1BC7E200A3BE31 /* mac_voice_whispersTestsUI.swift */; };
+		30E9CF942C1BC7E200A3BE31 /* mac_voice_whispersTestsUILaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9CF932C1BC7E200A3BE31 /* mac_voice_whispersTestsUILaunchTests.swift */; };
+		30E9CFA12C1BD91400A3BE31 /* testAudioAgain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30E9CFA02C1BD91400A3BE31 /* testAudioAgain.wav */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		30E9CF862C1BC7A100A3BE31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3099D8592C1140E1009C3574 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3099D8602C1140E1009C3574;
+			remoteInfo = mac_voice_whispers;
+		};
+		30E9CF952C1BC7E200A3BE31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3099D8592C1140E1009C3574 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3099D8602C1140E1009C3574;
+			remoteInfo = mac_voice_whispers;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3099D8612C1140E1009C3574 /* mac_voice_whispers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mac_voice_whispers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +63,12 @@
 		3099D8922C128697009C3574 /* KeyStringToModifierFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStringToModifierFlag.swift; sourceTree = "<group>"; };
 		3099D8942C12BD98009C3574 /* RecordingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingIndicator.swift; sourceTree = "<group>"; };
 		30E9CF7C2C1BC6CA00A3BE31 /* RecordingIndicatorWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingIndicatorWindowController.swift; sourceTree = "<group>"; };
+		30E9CF822C1BC7A100A3BE31 /* mac_voice_whispersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mac_voice_whispersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30E9CF842C1BC7A100A3BE31 /* mac_voice_whispersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mac_voice_whispersTests.swift; sourceTree = "<group>"; };
+		30E9CF8F2C1BC7E200A3BE31 /* mac_voice_whispersTestsUI.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mac_voice_whispersTestsUI.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30E9CF912C1BC7E200A3BE31 /* mac_voice_whispersTestsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mac_voice_whispersTestsUI.swift; sourceTree = "<group>"; };
+		30E9CF932C1BC7E200A3BE31 /* mac_voice_whispersTestsUILaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mac_voice_whispersTestsUILaunchTests.swift; sourceTree = "<group>"; };
+		30E9CFA02C1BD91400A3BE31 /* testAudioAgain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = testAudioAgain.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +81,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		30E9CF7F2C1BC7A100A3BE31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30E9CF8C2C1BC7E200A3BE31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +104,8 @@
 				3099D8902C11499F009C3574 /* whisper.cpp.swift */,
 				3099D8732C1147F8009C3574 /* .gitignore */,
 				3099D8632C1140E1009C3574 /* mac_voice_whispers */,
+				30E9CF832C1BC7A100A3BE31 /* mac_voice_whispersTests */,
+				30E9CF902C1BC7E200A3BE31 /* mac_voice_whispersTestsUI */,
 				3099D8622C1140E1009C3574 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				3099D8612C1140E1009C3574 /* mac_voice_whispers.app */,
+				30E9CF822C1BC7A100A3BE31 /* mac_voice_whispersTests.xctest */,
+				30E9CF8F2C1BC7E200A3BE31 /* mac_voice_whispersTestsUI.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +204,24 @@
 			path = whisper.cpp.swift;
 			sourceTree = "<group>";
 		};
+		30E9CF832C1BC7A100A3BE31 /* mac_voice_whispersTests */ = {
+			isa = PBXGroup;
+			children = (
+				30E9CFA02C1BD91400A3BE31 /* testAudioAgain.wav */,
+				30E9CF842C1BC7A100A3BE31 /* mac_voice_whispersTests.swift */,
+			);
+			path = mac_voice_whispersTests;
+			sourceTree = "<group>";
+		};
+		30E9CF902C1BC7E200A3BE31 /* mac_voice_whispersTestsUI */ = {
+			isa = PBXGroup;
+			children = (
+				30E9CF912C1BC7E200A3BE31 /* mac_voice_whispersTestsUI.swift */,
+				30E9CF932C1BC7E200A3BE31 /* mac_voice_whispersTestsUILaunchTests.swift */,
+			);
+			path = mac_voice_whispersTestsUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +246,42 @@
 			productReference = 3099D8612C1140E1009C3574 /* mac_voice_whispers.app */;
 			productType = "com.apple.product-type.application";
 		};
+		30E9CF812C1BC7A100A3BE31 /* mac_voice_whispersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30E9CF882C1BC7A100A3BE31 /* Build configuration list for PBXNativeTarget "mac_voice_whispersTests" */;
+			buildPhases = (
+				30E9CF7E2C1BC7A100A3BE31 /* Sources */,
+				30E9CF7F2C1BC7A100A3BE31 /* Frameworks */,
+				30E9CF802C1BC7A100A3BE31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30E9CF872C1BC7A100A3BE31 /* PBXTargetDependency */,
+			);
+			name = mac_voice_whispersTests;
+			productName = mac_voice_whispersTests;
+			productReference = 30E9CF822C1BC7A100A3BE31 /* mac_voice_whispersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		30E9CF8E2C1BC7E200A3BE31 /* mac_voice_whispersTestsUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30E9CF972C1BC7E200A3BE31 /* Build configuration list for PBXNativeTarget "mac_voice_whispersTestsUI" */;
+			buildPhases = (
+				30E9CF8B2C1BC7E200A3BE31 /* Sources */,
+				30E9CF8C2C1BC7E200A3BE31 /* Frameworks */,
+				30E9CF8D2C1BC7E200A3BE31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30E9CF962C1BC7E200A3BE31 /* PBXTargetDependency */,
+			);
+			name = mac_voice_whispersTestsUI;
+			productName = mac_voice_whispersTestsUI;
+			productReference = 30E9CF8F2C1BC7E200A3BE31 /* mac_voice_whispersTestsUI.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -195,6 +294,14 @@
 				TargetAttributes = {
 					3099D8602C1140E1009C3574 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					30E9CF812C1BC7A100A3BE31 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 3099D8602C1140E1009C3574;
+					};
+					30E9CF8E2C1BC7E200A3BE31 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 3099D8602C1140E1009C3574;
 					};
 				};
 			};
@@ -216,6 +323,8 @@
 			projectRoot = "";
 			targets = (
 				3099D8602C1140E1009C3574 /* mac_voice_whispers */,
+				30E9CF812C1BC7A100A3BE31 /* mac_voice_whispersTests */,
+				30E9CF8E2C1BC7E200A3BE31 /* mac_voice_whispersTestsUI */,
 			);
 		};
 /* End PBXProject section */
@@ -229,6 +338,21 @@
 				3099D86C2C1140E3009C3574 /* Preview Assets.xcassets in Resources */,
 				3099D8742C1147F8009C3574 /* .gitignore in Resources */,
 				3099D8692C1140E3009C3574 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30E9CF802C1BC7A100A3BE31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E9CFA12C1BD91400A3BE31 /* testAudioAgain.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30E9CF8D2C1BC7E200A3BE31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +376,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		30E9CF7E2C1BC7A100A3BE31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E9CF852C1BC7A100A3BE31 /* mac_voice_whispersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30E9CF8B2C1BC7E200A3BE31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E9CF942C1BC7E200A3BE31 /* mac_voice_whispersTestsUILaunchTests.swift in Sources */,
+				30E9CF922C1BC7E200A3BE31 /* mac_voice_whispersTestsUI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		30E9CF872C1BC7A100A3BE31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3099D8602C1140E1009C3574 /* mac_voice_whispers */;
+			targetProxy = 30E9CF862C1BC7A100A3BE31 /* PBXContainerItemProxy */;
+		};
+		30E9CF962C1BC7E200A3BE31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3099D8602C1140E1009C3574 /* mac_voice_whispers */;
+			targetProxy = 30E9CF952C1BC7E200A3BE31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3099D86E2C1140E3009C3574 /* Debug */ = {
@@ -427,6 +581,72 @@
 			};
 			name = Release;
 		};
+		30E9CF892C1BC7A100A3BE31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LW9726WSSJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "rewuorb.mac-voice-whispersTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mac_voice_whispers.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mac_voice_whispers";
+			};
+			name = Debug;
+		};
+		30E9CF8A2C1BC7A100A3BE31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LW9726WSSJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "rewuorb.mac-voice-whispersTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mac_voice_whispers.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mac_voice_whispers";
+			};
+			name = Release;
+		};
+		30E9CF982C1BC7E200A3BE31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LW9726WSSJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "rewuorb.mac-voice-whispersTestsUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = mac_voice_whispers;
+			};
+			name = Debug;
+		};
+		30E9CF992C1BC7E200A3BE31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LW9726WSSJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "rewuorb.mac-voice-whispersTestsUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = mac_voice_whispers;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -444,6 +664,24 @@
 			buildConfigurations = (
 				3099D8712C1140E3009C3574 /* Debug */,
 				3099D8722C1140E3009C3574 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30E9CF882C1BC7A100A3BE31 /* Build configuration list for PBXNativeTarget "mac_voice_whispersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30E9CF892C1BC7A100A3BE31 /* Debug */,
+				30E9CF8A2C1BC7A100A3BE31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30E9CF972C1BC7E200A3BE31 /* Build configuration list for PBXNativeTarget "mac_voice_whispersTestsUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30E9CF982C1BC7E200A3BE31 /* Debug */,
+				30E9CF992C1BC7E200A3BE31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

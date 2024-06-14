@@ -1,18 +1,6 @@
 import AVFoundation
 import SwiftUI
 
-struct CustomButtonStyle: ButtonStyle {
-  func makeBody(configuration: Configuration) -> some View {
-    configuration.label
-      .padding()
-      .background(configuration.isPressed ? Color.blue.opacity(0.7) : Color.blue)
-      .foregroundColor(.white)
-      .cornerRadius(10)
-      .shadow(radius: configuration.isPressed ? 0 : 10)
-      .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
-  }
-}
-
 struct AppMenu: View {
   @EnvironmentObject var whisperState: WhisperState
   @EnvironmentObject var keyboardShortcutManager: KeyboardShortcutManager
@@ -44,6 +32,7 @@ struct AppMenu: View {
       .padding()
       .background(whisperState.isRecording ? Color.green : Color.gray)
       .clipShape(Capsule())
+      .accessibilityIdentifier("toggleRecordingButton")
       .onHover { hovering in
         if hovering {
           NSCursor.pointingHand.push()
@@ -57,6 +46,7 @@ struct AppMenu: View {
         Text("Recording Status:")
         Text(whisperState.isRecording ? "Recording" : "Not Recording")
           .foregroundColor(whisperState.isRecording ? .red : .green)
+          .accessibilityIdentifier("recordingStatusText")
       }
       .padding()
 
@@ -100,6 +90,7 @@ struct AppMenu: View {
               }
             }
             .buttonStyle(PlainButtonStyle())
+            .accessibilityIdentifier("\(modifier)Button")
           }
         }
       }
@@ -114,6 +105,7 @@ struct AppMenu: View {
         Text(verbatim: whisperState.logger)
           .frame(maxWidth: .infinity, alignment: .leading)
           .padding()
+          .accessibilityIdentifier("loggerText")
       }
       .frame(minHeight: 150)
       .scrollIndicators(.visible)
@@ -127,6 +119,7 @@ struct AppMenu: View {
       .padding()
       .background(Color.gray)
       .clipShape(Capsule())
+      .accessibilityIdentifier("quitButton")
       .onHover { hovering in
         if hovering {
           NSCursor.pointingHand.push()
