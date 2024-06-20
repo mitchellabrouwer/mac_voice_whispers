@@ -48,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3054DEFF2C23B8B500ED7705 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3054DF032C23BA5A00ED7705 /* Logo.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Logo.webp; sourceTree = "<group>"; };
 		3099D8612C1140E1009C3574 /* mac_voice_whispers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mac_voice_whispers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3099D8642C1140E1009C3574 /* mac_voice_whispersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mac_voice_whispersApp.swift; sourceTree = "<group>"; };
 		3099D8682C1140E3009C3574 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,9 +102,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3054DF022C23BA4800ED7705 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				3054DF032C23BA5A00ED7705 /* Logo.webp */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
 		3099D8582C1140E1009C3574 = {
 			isa = PBXGroup;
 			children = (
+				3054DEFF2C23B8B500ED7705 /* README.md */,
 				3099D8902C11499F009C3574 /* whisper.cpp.swift */,
 				3099D8732C1147F8009C3574 /* .gitignore */,
 				3099D8632C1140E1009C3574 /* mac_voice_whispers */,
@@ -125,6 +136,7 @@
 		3099D8632C1140E1009C3574 /* mac_voice_whispers */ = {
 			isa = PBXGroup;
 			children = (
+				3054DF022C23BA4800ED7705 /* Documentation */,
 				3099D87C2C114953009C3574 /* UI */,
 				3099D87D2C114953009C3574 /* Models */,
 				3099D8812C114953009C3574 /* Resources */,
