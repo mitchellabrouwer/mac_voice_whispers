@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/mac_voice_whispers">
-    <img src="mac_voice_whispers/Documentation/Logo.webp" alt="Logo" width="80" height="80">
+    <img src="mac_voice_whispers/Documentation/Logo.webp" alt="Logo" width="120" height="120">
   </a>
 
 <h3 align="center">Mac Voice Whispers</h3>
