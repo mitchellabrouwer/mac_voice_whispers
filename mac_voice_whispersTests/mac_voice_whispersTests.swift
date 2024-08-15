@@ -10,7 +10,7 @@ final class mac_voice_whispersTests: XCTestCase {
     try super.setUpWithError()
     // use task to initialize whisperState whithin the main actor context
     Task { @MainActor in
-      self.whisperState = WhisperState()
+      self.whisperState = WhisperState(isLoaded: false)
     }
   }
 
