@@ -105,6 +105,7 @@ struct AppMenu: View {
         Text(verbatim: whisperState.logger)
           .frame(maxWidth: .infinity, alignment: .leading)
           .padding()
+          .textSelection(.enabled)
           .accessibilityIdentifier("loggerText")
       }
       .frame(minHeight: 150)
