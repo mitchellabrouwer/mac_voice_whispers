@@ -28,11 +28,29 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
     case couldNotLocateModel
   }
 
+  private func logBundleContents() {
+    let bundlePath = Bundle.main.bundlePath
+    logger += "Listing contents of Bundle at path: \(bundlePath)\n"
+    do {
+      let contents = try FileManager.default.contentsOfDirectory(atPath: bundlePath)
+      for content in contents {
+        logger += "Found resource: \(content)\n"
+      }
+    } catch {
+      logger += "Error listing bundle contents: \(error)\n"
+    }
+  }
+
   init(isLoaded: Bool) {
     super.init()
+
     do {
+      logger +=
+        "App running in \(ProcessInfo.processInfo.environment["CONFIGURATION"] ?? "Unknown configuration") mode.\n"
+      logBundleContents()
       try loadModel()
       canTranscribe = true
+
     } catch {
       print(error.localizedDescription)
       logger += "\(error.localizedDescription)\n"
@@ -42,6 +60,8 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
   private func loadModel() throws {
     logger += "Loading model...\n"
     if let modelUrl {
+      logger += "Found model at \(modelUrl.path), attempting to load...\n"
+
       whisperContext = try WhisperContext.createContext(path: modelUrl.path())
       logger += "Loaded model \(modelUrl.lastPathComponent)\n"
     } else {
