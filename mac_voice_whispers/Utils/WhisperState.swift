@@ -21,7 +21,7 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
   private var recordedFile: URL? = nil
 
   private var modelUrl: URL? {
-    Bundle.main.url(forResource: "ggml-tiny.en", withExtension: "bin")
+    Bundle.main.url(forResource: "ggml-tiny.en-q5_1", withExtension: "bin")
   }
 
   private enum LoadError: Error {
