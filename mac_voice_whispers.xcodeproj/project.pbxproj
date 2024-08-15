@@ -12,7 +12,7 @@
 		3099D86C2C1140E3009C3574 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3099D86B2C1140E3009C3574 /* Preview Assets.xcassets */; };
 		3099D8742C1147F8009C3574 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3099D8732C1147F8009C3574 /* .gitignore */; };
 		3099D8772C1148F3009C3574 /* whisper in Frameworks */ = {isa = PBXBuildFile; productRef = 3099D8762C1148F3009C3574 /* whisper */; };
-		3099D87A2C11490D009C3574 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 3099D8792C11490D009C3574 /* HotKey */; };
+		3099D87A2C11490D009C3574 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 3099D8792C11490D009C3574 /* HotKey */; settings = {ATTRIBUTES = (Required, ); }; };
 		3099D8872C114953009C3574 /* AppMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D87B2C114953009C3574 /* AppMenu.swift */; };
 		3099D8882C114953009C3574 /* ggml-tiny.en.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3099D87E2C114953009C3574 /* ggml-tiny.en.bin */; };
 		3099D88A2C114953009C3574 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099D8832C114953009C3574 /* Recorder.swift */; };
@@ -102,6 +102,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3030262E2C23EFAC00D6E26E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3054DF022C23BA4800ED7705 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +127,7 @@
 				30E9CF832C1BC7A100A3BE31 /* mac_voice_whispersTests */,
 				30E9CF902C1BC7E200A3BE31 /* mac_voice_whispersTestsUI */,
 				3099D8622C1140E1009C3574 /* Products */,
+				3030262E2C23EFAC00D6E26E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -481,6 +489,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -538,6 +547,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
@@ -548,14 +558,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = mac_voice_whispers/mac_voice_whispers.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mac_voice_whispers/Preview Content\"";
 				DEVELOPMENT_TEAM = LW9726WSSJ;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Mac Voice Whispers";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires access to your microphone";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -575,14 +590,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = mac_voice_whispers/mac_voice_whispers.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mac_voice_whispers/Preview Content\"";
 				DEVELOPMENT_TEAM = LW9726WSSJ;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Mac Voice Whispers";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires access to your microphone";
 				LD_RUNPATH_SEARCH_PATHS = (
