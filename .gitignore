@@ -128,4 +128,5 @@ xcuserdata
 
 # Exclude model files
 **/Models/*
+**/Resources/*
 
