@@ -14,7 +14,7 @@
     <br />
   </p>
 </div>
-
+ 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -44,4 +44,11 @@ To get a local copy up and running follow these simple steps.
 1. **Clone the repo**
    ```sh
    git clone https://github.com/github_username/mac_voice_whispers.git
+   ```
 
+2. **Download the model binary**
+   [ggml-tiny.en-q5_1.bin](https://huggingface.co/ggerganov/whisper.cpp/blob/main/ggml-tiny.en-q5_1.bin) and drag it into the `mac_voice_whispers/Resources/models/` directory.
+
+3. **Dependencies**
+   Ensure you have [HotKey(main)](https://github.com/soffes/HotKey) and [whisper(master)](https://github.com/ggerganov/whisper.cpp) dependencies added.
+    
