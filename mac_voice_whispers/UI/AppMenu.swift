@@ -5,7 +5,7 @@ struct AppMenu: View {
   @EnvironmentObject var whisperState: WhisperState
   @EnvironmentObject var keyboardShortcutManager: KeyboardShortcutManager
 
-  @State private var newShortcutKey: String = "r"
+  // @State private var newShortcutKey: String = "c"
 
   func toggleRecording() {
     Task {
@@ -58,13 +58,17 @@ struct AppMenu: View {
           .font(.title)
           .padding(.bottom, 2)
 
-        Picker("Edit Shortcut", selection: $newShortcutKey) {
+        Picker("Edit Shortcut", selection: $keyboardShortcutManager.shortcutKey) {
           ForEach("abcdefghijklmnopqrstuvwxyz".map { String($0) }, id: \.self) { key in
             Text(key.lowercased()).tag(key)
           }
         }
         .pickerStyle(MenuPickerStyle())
         .padding()
+        .onChange(of: keyboardShortcutManager.shortcutKey) { oldValue, newValue in
+          print("Shortcut changed from \(oldValue) to \(newValue)")
+          keyboardShortcutManager.updateShortcutKey(key: newValue)
+        }
 
         HStack(spacing: 2) {
           ForEach(["control", "option", "command"], id: \.self) { modifier in

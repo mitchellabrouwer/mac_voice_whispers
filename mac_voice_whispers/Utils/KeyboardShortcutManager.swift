@@ -23,7 +23,6 @@ class KeyboardShortcutManager: ObservableObject {
     }
 
     let modifiers = modifierFlags(from: shortcutModifiers)
-
     hotkey = HotKey(key: key, modifiers: modifiers)
     hotkey?.keyDownHandler = {
       Task {
@@ -49,6 +48,9 @@ class KeyboardShortcutManager: ObservableObject {
     shortcutModifiers = modifiersSet.joined(separator: ",")
 
     setupHotKey()
+    print("hot keys changed to")
+    print(shortcutKey)
+    print(shortcutModifiers)
   }
 
 }
