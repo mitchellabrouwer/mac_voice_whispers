@@ -51,4 +51,5 @@ To get a local copy up and running follow these simple steps.
 
 3. **Dependencies**
    Ensure you have [HotKey(main)](https://github.com/soffes/HotKey) and [whisper(master)](https://github.com/ggerganov/whisper.cpp) dependencies added.
+   Note: The whisper.cpp dependency has been pinned to a specific commit to prevent potential issues caused by future updates.
     
